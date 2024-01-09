@@ -25,6 +25,7 @@ const chooseMode6 = document.getElementById('chooseMode6');
 const chooseMode7 = document.getElementById('chooseMode7');
 const chooseMode8 = document.getElementById('chooseMode8');
 const chooseMode9 = document.getElementById('chooseMode9');
+const chooseMode10 = document.getElementById('chooseMode10');
 const chooseCreateConfirm = document.getElementById('chooseCreateConfirm');
 const chooseJoinConfirm = document.getElementById('chooseJoinConfirm');
 const chooseStart = document.getElementById('chooseStart');
@@ -47,6 +48,7 @@ const modeCard6 = document.getElementById('modeCard6');
 const modeCard7 = document.getElementById('modeCard7');
 const modeCard8 = document.getElementById('modeCard8');
 const modeCard9 = document.getElementById('modeCard9');
+const modeCard10 = document.getElementById('modeCard10');
 const streetView = document.getElementById('street-view');
 const disDisplay = document.getElementById('disDisplay');
 const playersList = document.getElementById('playersList');
@@ -212,7 +214,7 @@ const asLocs = ['<iframe src="https://www.google.com/maps/embed?pb=!4v1637763486
 const afLocs = ['<iframe src="https://www.google.com/maps/embed?pb=!4v1638970474989!6m8!1m7!1sXgLEfvJGg3kiEL0VYG5yPA!2m2!1d-33.92398285542964!2d18.4212843655564!3f346.27230667504426!4f-8.97724538593323!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638970508145!6m8!1m7!1sql9zpGr0mhurBUzV5X-DdQ!2m2!1d-33.81303705521114!2d18.47700173250375!3f308.4692720931664!4f-0.48488108164382027!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638970533230!6m8!1m7!1shUOXO690DB6nm_aynOL2qw!2m2!1d-33.57462936654147!2d18.49575991686487!3f82.25908834714679!4f-11.141272191626499!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638970562280!6m8!1m7!1sAcl6fmIivSFmqMjSH2y3hg!2m2!1d-26.48852094043705!2d31.37866412245646!3f350.4122110397495!4f-5.73977739227297!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638970734981!6m8!1m7!1sdLqRPEkTJ6hmoD1NxC-cBw!2m2!1d-1.186153571005233!2d36.89111924084855!3f293.1350451659508!4f-9.709300731290256!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638970759756!6m8!1m7!1sCAoSLEFGMVFpcE9QbVpsWjBIN25xRDQ3QmU5Z3ZwbTF6X252V0JXaThLN2hNdXgt!2m2!1d-1.247318930626077!2d36.87084591638492!3f117.06183108757699!4f11.949309537146405!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638970874419!6m8!1m7!1szJY482FCRl7RnYlI57onOw!2m2!1d14.72981904477699!2d-17.31648281267237!3f271.1489174924111!4f-0.3618454788267087!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638970896156!6m8!1m7!1sD2DCsQUYVp7RrdJmB_PL7w!2m2!1d14.74481697422851!2d-17.51068753338312!3f42.01123531822776!4f7.260700621961206!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638970942189!6m8!1m7!1sTCHZchkoM8y8wX5wXzYMpg!2m2!1d15.99403868369749!2d-13.66170468795654!3f279.3321067823864!4f-11.483312721557581!5f0.7640569575811268" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971000270!6m8!1m7!1sCAoSLEFGMVFpcFBLSi1CQzNlMXVkM3ptU1VESU5acFcwQkVHRGVWSEpUVHJwSWw5!2m2!1d30.02893912968509!2d31.25935737321463!3f158.0473039595359!4f6.073861913525576!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971052067!6m8!1m7!1sCAoSLEFGMVFpcFBkT1BSSTV1ZHpQcGpzdWtFNlAzQWFjTFp2TWRjQkljTzhxcXA5!2m2!1d29.98599697081514!2d31.20907147380993!3f241.83349845371555!4f-12.942399725428004!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971123289!6m8!1m7!1sCAoSLEFGMVFpcE1BY09fQVlxQV9Sd2lCeVVtcm5obE5RRmh2cGQzUnRjSGhFaDFa!2m2!1d29.89096538208511!2d31.22065073840267!3f311.45037186441607!4f-17.30012331525704!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971232020!6m8!1m7!1sCAoSLEFGMVFpcE1HWTIwMnZyU0xhVGxHUy05LVNHYUNUb2FpWmZQOXl6Rm5uSi1C!2m2!1d35.7759946277362!2d10.8332796022296!3f160.64162363343289!4f-9.309187174000314!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971263700!6m8!1m7!1sCAoSLEFGMVFpcE1LRDlSSGNZWGl2al93Nkszd1E1UUZjcWV6OEFJLTlZSzdCMDJl!2m2!1d36.79916113475753!2d10.17541889101267!3f9.587751085349169!4f-0.8239336236219401!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971332909!6m8!1m7!1sCAoSLEFGMVFpcE5WS0JrcnJLSk5EVGFkYjBxQ0JaVnA2RjBfWndNMWJTdnZuM3k2!2m2!1d7.4977177!2d4.5886898!3f292.28785754739965!4f-1.461714870117504!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971380793!6m8!1m7!1sCAoSLEFGMVFpcE4zbkpJWkxaNFB1Z2c1Y0drSnJoLUhCLTk5cFRPQUtrMjVCNXl1!2m2!1d9.055229299999999!2d7.364913400000001!3f164.37096259436427!4f-16.03325754370924!5f0.7053868135331123" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971492585!6m8!1m7!1ssnxKNlv9o1dSt5YJZMWDkA!2m2!1d7.850310213760871!2d6.727684593434483!3f53.41893822865474!4f-15.841943918376856!5f0.9096719005228833" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971520896!6m8!1m7!1sZCBk5zyHrtb1w9sVUe9mBA!2m2!1d6.739252862115639!2d-1.535402051167635!3f267.02075625293634!4f-18.71369032862131!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971572224!6m8!1m7!1sfJ2QySki1muxlgPBqMsnlg!2m2!1d14.7857407362849!2d-16.92469996512441!3f85.17733907721583!4f-16.689728276205457!5f0.42739544376827543" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1638971638341!6m8!1m7!1sCAoSLEFGMVFpcE0tTXdIUVA1QTk5RjZfOW0zRkhENmxTNjM1Uno4YV92QWFTU1NE!2m2!1d31.63901912221427!2d-8.014924433355873!3f273.9687303294244!4f-13.630470485993769!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1639228981367!6m8!1m7!1sCAoSLEFGMVFpcFA1Z285UVdiT2Q1WS11ZWtMZGNpd2hxR19QZ1dVeVN0ZlQ0Z2d0!2m2!1d-0.2740328742229692!2d35.97538623958826!3f40!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1639229000949!6m8!1m7!1st_p01dNFruZavS96LnK3Sw!2m2!1d5.617921310306463!2d-0.1868270764356554!3f32.38796!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1639229015709!6m8!1m7!1s9NBeP_YDsEqHH1IrbYwqgA!2m2!1d10.53656948060857!2d-2.699694923619762!3f177.9777!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1639229049986!6m8!1m7!1sCAoSLEFGMVFpcE81NnU1cDM4QkVSN042OFRvOTZWbklVTWNVVGRDRXp6eXVDMC1H!2m2!1d29.99009489865511!2d31.14979835077759!3f125.30094393540195!4f6.64966417696759!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1639229063601!6m8!1m7!1sCAoSK0FGMVFpcE1kd3RBMXh5d09tdUZFek9qRWxKRjRzcFF3bFNWb05tcFpTN1E.!2m2!1d31.24856200386195!2d29.96528507595747!3f190.46623!4f0.4501599999999968!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1639229080867!6m8!1m7!1sCAoSLEFGMVFpcE1rNXZqTE5tV3FjeXkwb2JsX185QXJkTmw4M2dsbmhZTEVnb2F5!2m2!1d0.515175672427284!2d37.06818826496601!3f97.61743608503467!4f6.916871430640569!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1639229098641!6m8!1m7!1ss7N4vkpHPa6ayJ0DtPvjfA!2m2!1d-22.08889949341071!2d46.77477923561523!3f23.87422218661944!4f8.015153311715196!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1639229119954!6m8!1m7!1sCAoSLEFGMVFpcE9wMFppODQ4MnozaHN3TDZrM2s1WWVBYzV6NmNtbERUblZON2RM!2m2!1d13.692039426247!2d-14.873291641028!3f114.37286957480713!4f-9.651466873528577!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>'];
 
 
-
+const esLocs = ['<iframe src="https://www.google.com/maps/embed?pb=!4v1704835116380!6m8!1m7!1sTEcyG8dXNyOYS5tEeyFEBA!2m2!1d41.81667015690932!2d-6.176842412972878!3f343.44244919557235!4f-6.882640820052075!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704835560265!6m8!1m7!1s7T4Hl02mifT2ywM94IHk0g!2m2!1d42.45928233291679!2d-2.45665653128415!3f46.15515332644832!4f-4.13801555672832!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704835692991!6m8!1m7!1sX90246iZCZHpH5WCDX2ZRg!2m2!1d40.34384652834383!2d-3.831619332417652!3f338.98542045214583!4f5.1402195056545!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704835818265!6m8!1m7!1s6pyaIcZawnVAvLbwyDyXVQ!2m2!1d40.65940532469303!2d-4.695104387670186!3f124.55167897533883!4f-4.665092365922632!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src=""https://www.google.com/maps/embed?pb=!4v1704835856271!6m8!1m7!1sIx93GQ4QoFjYNME96J4nBA!2m2!1d36.78065689479878!2d-6.355168076782528!3f260.31796!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704835887182!6m8!1m7!1sCfa2UNcYKhdBI2BKEyXaog!2m2!1d37.62609845938368!2d-6.172432513220978!3f225.1207414794561!4f-3.166590801200414!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704835917889!6m8!1m7!1swGNfKQpbBPLSzcqCBNgv-Q!2m2!1d41.65783889427664!2d-0.8957332014375317!3f204.39713!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704835985521!6m8!1m7!1sFNPMlSOjks3G8GWW5COdvg!2m2!1d43.24905014491505!2d-2.92675411983979!3f312.59912!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836019527!6m8!1m7!1sqJ8bm7eZtJiNB7r2eDw23g!2m2!1d42.34169653240155!2d-7.863880042171632!3f359.50674!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836049950!6m8!1m7!1s0yx6O3FdVjHotknH-yH3ig!2m2!1d41.86437571837804!2d0.4173759008715595!3f334.85022!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836071237!6m8!1m7!1smIFKoX7-bDw77AFV9m5jfw!2m2!1d38.79655728355164!2d-4.859382651768454!3f117.04867009907409!4f2.8209180525902298!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836105622!6m8!1m7!1sUtI2IzzWQtsIB78ejM5ARQ!2m2!1d43.34855486259104!2d-5.343579589480529!3f105.5408972521252!4f1.9276040720712047!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836146804!6m8!1m7!1sUPrKxdm7evrQ8eR_sP7tEQ!2m2!1d41.44257410263587!2d2.247127647104842!3f307.4017!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836309318!6m8!1m7!1sB2VS6KI15lnRtcRoKrp1fg!2m2!1d40.39767933652414!2d-3.682267245203845!3f46.230345197986495!4f-1.5282697074205913!5f0.43040159099603464" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836341788!6m8!1m7!1sbHRTUqlNPlznQJ_Q2Y0tzg!2m2!1d43.05517708404995!2d-0.4317484437306762!3f183.15831545820436!4f1.1994876502906067!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836395067!6m8!1m7!1sRGpz7hG_cW38Y8kFmsvSVA!2m2!1d42.50918762341607!2d1.540799381444927!3f0.424788077640585!4f-3.4041575172492884!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836466302!6m8!1m7!1sIwOwt_1WfNBKQ9QlvMDz4A!2m2!1d36.48416931927137!2d-4.984872751542619!3f295.1278661129443!4f0.9973607201376922!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836510130!6m8!1m7!1sM57VKbhWFyNQV4PO7apw-w!2m2!1d39.98091830435558!2d-6.050010264722954!3f282.83902919299044!4f-4.076057735677594!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836561194!6m8!1m7!1sTjHZxjD0t7D0sEjQMP8N_w!2m2!1d43.34454086191854!2d-3.239052379571713!3f2.639485512622535!4f1.1865500632463295!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836627178!6m8!1m7!1smuRUnqHoQjQNP9FSfeKIyg!2m2!1d41.12009233595079!2d1.243261892785123!3f297.2478399478703!4f-8.085519498643393!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836658268!6m8!1m7!1sebKhgXmZLk6mku9MSCHO4w!2m2!1d39.64261211092946!2d-2.272891692213685!3f109.91566!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836697053!6m8!1m7!1srA0l7M1j3LkMfyUoluVwwQ!2m2!1d43.00851319817843!2d-7.559343065889183!3f94.27228353651826!4f2.143843540828186!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836773832!6m8!1m7!1sX0K2iupa5U-zwXXilWXm8Q!2m2!1d38.2885435843703!2d-0.6124287199701752!3f330.26898!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836814071!6m8!1m7!1sv1i_-yMfDyfPs-uzrxgOlQ!2m2!1d41.58384731009078!2d-4.720745281254475!3f93.83278!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836889912!6m8!1m7!1sG-iMskiu4oWeLZTBlxogZA!2m2!1d43.35588056778248!2d-8.404580303431063!3f202.85867!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704836952047!6m8!1m7!1sDlfSCnWlFoTWpxtYiPmLQQ!2m2!1d42.80393174602416!2d-1.649732744375827!3f266.67713580053737!4f-3.399494373951214!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837001473!6m8!1m7!1sTdp5p5VO0CIBc9iu7ksFfg!2m2!1d38.472092275463!2d-5.564833947921171!3f83.4353!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837057997!6m8!1m7!1s-az2E5M3cEfsDODkJGdOZA!2m2!1d43.54518292583089!2d-5.661885085417082!3f144.1772467435853!4f1.6529715436072934!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837562886!6m8!1m7!1s_pmR6qNxZ1UhFhHewKQ_dw!2m2!1d37.62829113763287!2d-0.7083776456775428!3f133.28585844552845!4f3.7722313902699796!5f2.7408981627055193" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837672769!6m8!1m7!1s5uAC_4LLPCqAFgU_mQM9FQ!2m2!1d38.91814309005771!2d-6.344127797563829!3f290.10484413105934!4f-7.264821060470851!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837700868!6m8!1m7!1sjcp3AaeiQuHN8ym95gKuEg!2m2!1d36.11174941226156!2d-5.345411138847167!3f275.4472627674975!4f3.064006999954458!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837747331!6m8!1m7!1szpFR8rX94PcP9qbQNseqQg!2m2!1d39.48118923687199!2d-6.379441572757349!3f115.60512715522643!4f2.213285062418791!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837782120!6m8!1m7!1sJQWFJS4fyHGywvnpyKoXUw!2m2!1d42.54818591937833!2d-6.596033046292077!3f67.25945!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837809676!6m8!1m7!1sUhk3knuR_E9T2DKmeblbXQ!2m2!1d39.002878319374!2d-1.856005898883225!3f233.95891!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837840191!6m8!1m7!1sD-WzZa4EmwPzFti3f9XiNw!2m2!1d36.85936202389385!2d-2.45150327166333!3f193.68448!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>','<iframe src="https://www.google.com/maps/embed?pb=!4v1704837874188!6m8!1m7!1smGKsSsPKfxlvVQBZdCfotQ!2m2!1d37.16007201618934!2d-5.930631074870965!3f253.64764!4f0!5f0.7820865974627469" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>'];
 
 chooseHome.addEventListener('click', () => {
     createScreen.style.display = 'none';
@@ -303,6 +305,8 @@ chooseMode1.addEventListener('click', () => {
     chooseMode8.innerHTML = 'Choose';
     modeCard9.classList.remove('mode-card-active');
     chooseMode9.innerHTML = 'Choose';
+    modeCard10.classList.remove('mode-card-active');
+    chooseMode10.innerHTML = 'Choose';
 })
 
 chooseMode2.addEventListener('click', () => {
@@ -335,6 +339,8 @@ chooseMode2.addEventListener('click', () => {
     chooseMode8.innerHTML = 'Choose';
     modeCard9.classList.remove('mode-card-active');
     chooseMode9.innerHTML = 'Choose';
+    modeCard10.classList.remove('mode-card-active');
+    chooseMode10.innerHTML = 'Choose';
 })
 
 chooseMode3.addEventListener('click', () => {
@@ -367,6 +373,8 @@ chooseMode3.addEventListener('click', () => {
     chooseMode8.innerHTML = 'Choose';
     modeCard9.classList.remove('mode-card-active');
     chooseMode9.innerHTML = 'Choose';
+    modeCard10.classList.remove('mode-card-active');
+    chooseMode10.innerHTML = 'Choose';
 })
 
 chooseMode4.addEventListener('click', () => {
@@ -399,6 +407,8 @@ chooseMode4.addEventListener('click', () => {
     chooseMode8.innerHTML = 'Choose';
     modeCard9.classList.remove('mode-card-active');
     chooseMode9.innerHTML = 'Choose';
+    modeCard10.classList.remove('mode-card-active');
+    chooseMode10.innerHTML = 'Choose';
 })
 
 chooseMode5.addEventListener('click', () => {
@@ -431,6 +441,8 @@ chooseMode5.addEventListener('click', () => {
     chooseMode8.innerHTML = 'Choose';
     modeCard9.classList.remove('mode-card-active');
     chooseMode9.innerHTML = 'Choose';
+    modeCard10.classList.remove('mode-card-active');
+    chooseMode10.innerHTML = 'Choose';
 })
 
 chooseMode6.addEventListener('click', () => {
@@ -463,6 +475,8 @@ chooseMode6.addEventListener('click', () => {
     chooseMode8.innerHTML = 'Choose';
     modeCard9.classList.remove('mode-card-active');
     chooseMode9.innerHTML = 'Choose';
+    modeCard10.classList.remove('mode-card-active');
+    chooseMode10.innerHTML = 'Choose';
 })
 
 chooseMode7.addEventListener('click', () => {
@@ -495,6 +509,8 @@ chooseMode7.addEventListener('click', () => {
     chooseMode8.innerHTML = 'Choose';
     modeCard9.classList.remove('mode-card-active');
     chooseMode9.innerHTML = 'Choose';
+    modeCard10.classList.remove('mode-card-active');
+    chooseMode10.innerHTML = 'Choose';
 })
 
 chooseMode8.addEventListener('click', () => {
@@ -527,6 +543,8 @@ chooseMode8.addEventListener('click', () => {
     chooseMode7.innerHTML = 'Choose';
     modeCard9.classList.remove('mode-card-active');
     chooseMode9.innerHTML = 'Choose';
+    modeCard10.classList.remove('mode-card-active');
+    chooseMode10.innerHTML = 'Choose';
 })
 
 chooseMode9.addEventListener('click', () => {
@@ -557,6 +575,42 @@ chooseMode9.addEventListener('click', () => {
     chooseMode6.innerHTML = 'Choose';
     modeCard7.classList.remove('mode-card-active');
     chooseMode7.innerHTML = 'Choose';
+    modeCard8.classList.remove('mode-card-active');
+    chooseMode8.innerHTML = 'Choose';
+    modeCard10.classList.remove('mode-card-active');
+    chooseMode10.innerHTML = 'Choose';
+})
+
+chooseMode10.addEventListener('click', () => {
+    modeCard10.classList.add('mode-card-active');
+    chooseMode10.innerHTML = '<i class="fas fa-check-circle"></i> Chosen';
+    modeImg.style.borderTopRightRadius = '0px';
+    modeImg.style.borderTopLeftRadius = '0px';
+    isModeChosen = true;
+    if(popup.classList.contains('animate__zoomOut')){
+        popup.classList.remove('animate__zoomOut')
+    }
+    popup.classList.add('animate__zoomIn')
+    popup.style.display = 'flex';
+    
+    mode='espana';
+
+    modeCard1.classList.remove('mode-card-active');
+    chooseMode1.innerHTML = 'Choose';
+    modeCard3.classList.remove('mode-card-active');
+    chooseMode3.innerHTML = 'Choose';
+    modeCard4.classList.remove('mode-card-active');
+    chooseMode4.innerHTML = 'Choose';
+    modeCard5.classList.remove('mode-card-active');
+    chooseMode5.innerHTML = 'Choose';
+    modeCard2.classList.remove('mode-card-active');
+    chooseMode2.innerHTML = 'Choose';
+    modeCard6.classList.remove('mode-card-active');
+    chooseMode6.innerHTML = 'Choose';
+    modeCard7.classList.remove('mode-card-active');
+    chooseMode7.innerHTML = 'Choose';
+    modeCard9.classList.remove('mode-card-active');
+    chooseMode9.innerHTML = 'Choose';
     modeCard8.classList.remove('mode-card-active');
     chooseMode8.innerHTML = 'Choose';
 })
@@ -679,6 +733,15 @@ function genRandEur(){
         genRandEur();
     }
 }
+function genRandEsp(){
+    locIndex = Math.floor(Math.random(esLocs.length)*esLocs.length);
+    if(!chosenLocs[locIndex]){
+        chosenLocs[locIndex] = 1;
+        socket.emit('display-street', ({roomId, locIndex}));
+    }else{
+        genRandEsp();
+    }
+}
 
 
 confirPin.addEventListener('click', () => {
@@ -720,6 +783,9 @@ nextMap.addEventListener('click', () => {
         }
         else if(mode=="africa"){
             genRandAfr();
+        }
+        else if(mode=="espana"){
+            genRandEsp();
         }
     }
 })
@@ -824,6 +890,12 @@ socket.on('street-display', (locIndex, Cmode) => {
     else if(mode=="africa"){
         streetView.innerHTML=afLocs[locIndex];
         link = afLocs[locIndex];
+            
+        
+    }
+    else if(mode=="espana"){
+        streetView.innerHTML=esLocs[locIndex];
+        link = esLocs[locIndex];
             
         
     }

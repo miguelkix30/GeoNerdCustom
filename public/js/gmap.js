@@ -27,6 +27,9 @@ function initMap(){
     }else if(mode=="africa"){
         myLatLng = { lat: 0.04401599461441711, lng: 25.383148861553586 };
         zoomVal = 2;
+    } else if(mode=="espana"){
+    myLatLng = { lat: 40.312134, lng: -4.265921 };
+    zoomVal = 5;
     }
     const markerArray = [];
     let map = new google.maps.Map(document.getElementById("map"), {
